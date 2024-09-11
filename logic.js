@@ -1,11 +1,22 @@
-import AudioMotionAnalyzer from 'audiomotion-analyzer';
+// import AudioMotionAnalyzer from 'audiomotion-analyzer';
 
 let currentAudio = null;
-const container = document.getElementById('container');
-const audioSource = document.getElementById('currentAudio');
-const audioMotion = new AudioMotionAnalyzer(container, { source: audioSource });
+// const container = document.getElementById('container');
+// const audioSource = document.getElementById('currentAudio');
+// const audioMotion = new AudioMotionAnalyzer(container, { source: audioSource });
 
-
+function bollywood() {
+    console.log("entered");
+    
+    let m = Math.random() * (0 - 4) + 5;
+    let n = (Math.floor(m))-1;
+    let music = ["sounds/bollywood.mp3","sounds/dhh.mp3","sounds/rock.mp3","sounds/edm.mp3"]
+    console.log(n);
+    playAudio(music[n]);
+    console.log("exited");
+    
+}
+bollywood();
 function handleMusicClick() {
     const clickedButton = this.innerHTML;
 
@@ -14,9 +25,12 @@ function handleMusicClick() {
         currentAudio.currentTime = 0;
     }
 
+
     switch (clickedButton) {
         case "Bollywood":
-            playAudio("sounds/bollywood.mp3");
+            console.log("level1");
+            
+            bollywood();
             break;
         case "DHH":
             playAudio("sounds/dhh.mp3");
