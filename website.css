@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.page1 {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.vishnu {
+    color: white;
+    font-size: 78px;
+    opacity: 0;
+    animation: float 3s ease-in-out forwards;
+}
+
+h2 {
+    color: gray;
+    margin-bottom: 150px;
+    font-size: 24px;
+    opacity: 0;
+    animation: float 4s ease-in-out forwards;
+    text-transform: capitalize;
+}
+
+#cards { 
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.card {
+    box-shadow: 
+        0 0 10px rgba(0, 0, 255, 0.7),
+        0 0 20px rgba(0, 0, 255, 0.5),
+        0 0 30px rgba(0, 0, 255, 0.3);
+    background-color: transparent;
+    opacity: 0;
+    cursor: pointer;
+    border: 5px solid blue;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.underline {
+    box-shadow: 
+        0 0 10px rgba(0, 0, 255, 0.7),
+        0 0 20px rgba(0, 0, 255, 0.5),
+        0 0 30px rgba(0, 0, 255, 0.3);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.feedback {
+    animation: float 4s ease-in-out forwards;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    opacity: 0%;
+    margin-top: 80px;
+}
+
+.feedback h1 {
+    color: #3a3a3a;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.yes {
+    background-color: #007bff;
+    color: white;
+}
+
+button.no {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+.spotify-player-container {
+    opacity: 0%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Allows it to be positioned relative to the entire page */
+    top: 60%; /* Moves it to the middle of the page vertically */
+    left: 50%; /* Moves it to the middle of the page horizontally */
+    transform: translate(-50%, -50%); /* Centers the element perfectly */
+    z-index: 999; /* Highest z-index so it appears on top of all elements */
+    width: 70vw; /* 70% of the viewport width */
+    height: auto; /* Adjust height automatically */
+    
+}
+
+.spotify-player {
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    background-color: #ffffff; /* Dark background behind the Spotify embed */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    width: 100%;
+}
+
+iframe {
+    width: 100%; /* Fill the entire container's width */
+    height: calc(70vw * 0.5625); /* Adjust height for a 16:9 ratio for a landscape look */
+ /* Slightly round the iframe corners */
+}
+
+.buttons {
+    position: relative; /* Ensure it has a position context */
+    z-index: 1000; /* Ensure it's on top of other elements */
+}
