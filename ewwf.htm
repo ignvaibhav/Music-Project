@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll and Page Reveal Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <style>
+        body {
+            min-height: 200vh;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .scroll-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .scroll-button:hover {
+            background-color: #45a049;
+        }
+
+        .page2 {
+            display: none;
+            margin-top: 150vh;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button class="scroll-button" onclick="p2()">Show Page 2</button>
+
+    <div class="page2">
+        <h2>Page 2</h2>
+        <p>This is the content of Page 2, revealed after scrolling!</p>
+    </div>
+
+    <script>
+        function p2() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+            gsap.to(".page2", {
+                display: "block",
+                opacity: 1,
+                duration: 0.5,
+                delay: 0.5 // Delay to start after scrolling
+            });
+        }
+    </script>
+</body>
+</html>

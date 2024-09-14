@@ -7,17 +7,20 @@
     <link rel="stylesheet" href="website.css">
 </head>
 <body>
+        <!---------- Page1 code ------------>
+
     <div class="page1">
-        <h1 class="vishnu">Siddharth GPT</h1>
+        <h1 class="vishnu">Vaibhav GPT</h1>
         <h2 class="judger">Your music companion</h2>
         <div id="cards">
-            <button class="card">Bollywood</button>
+            <button class="card" onclick="ab()">Bollywood</button>
             <button class="card">DHH</button>
             <button class="card">Rock</button>
-            <button class="card">EDM</button>
+            <button class="card">Metal</button>
         </div>
         <div class="underline"></div>
         
+        <!---------- feedback code ------------>
 
         <div class="feedback">
             <h1>Do you want more suggestions?</h1>
@@ -27,6 +30,8 @@
             </div>
         </div>
 
+        <!---------- player code ------------>
+
         <div class="spotify-player-container">
             <div class="spotify-player">
                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/16PSZwABl4VFJvfDFOPOoB?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -34,8 +39,73 @@
         </div>
     </div>
 
+    <!---------- Page 2 ------------>
+
+    <div class="page2">
+        <div class="player">
+            <div class="turntable">
+                <div class="record"></div>
+                <div class="arm"></div>
+            </div>
+            <div class="controls">
+                <div class="song-info">Queen / Hammer to Fall</div>
+                <div class="buttons">
+                    <button id="prevBtn">⏮</button>
+                    <button id="playBtn">▶</button>
+                    <button id="nextBtn">⏭</button>
+                    <button id="menuBtn">☰</button>
+                </div>
+                <div class="duration">Duration: 1:47 / 4:28</div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="website.js"></script>
+
     <script src="logic.js"></script>
+
+    <script>
+
+        const playBtn = document.getElementById('playBtn');
+        const arm = document.querySelector('.arm');
+        const record = document.querySelector('.record');
+        let isPlaying = false;
+
+        playBtn.addEventListener('click', () => {
+            isPlaying = !isPlaying;
+            if (isPlaying) {
+                playBtn.textContent = '⏸';
+                arm.style.transform = 'rotate(0deg)';
+                record.style.animationPlayState = 'running';
+            } else {
+                playBtn.textContent = '▶';
+                arm.style.transform = 'rotate(-20deg)';
+                record.style.animationPlayState = 'paused';
+            }
+        });
+
+    </script>
+
+    <script>
+        function ab() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+            gsap.to(".page2", {
+                display: "block",
+                opacity: 1,
+                duration: 0.5,
+                delay: 0.5 // Delay to start after scrolling
+            });
+        }
+    </script>
 </body>
 </html>

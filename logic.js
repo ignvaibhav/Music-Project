@@ -1,11 +1,18 @@
-// import AudioMotionAnalyzer from 'audiomotion-analyzer';
-
 let currentAudio = null;
-// const container = document.getElementById('container');
-// const audioSource = document.getElementById('currentAudio');
-// const audioMotion = new AudioMotionAnalyzer(container, { source: audioSource });
+
+
+//random music logic
 
 function bollywood() {
+    console.log("entered");
+    let m = Math.random() * (0 - 4) + 5;
+    let n = (Math.floor(m))-1;
+    let music = ["sounds/bollywood.mp3","sounds/dhh.mp3","sounds/rock.mp3","sounds/edm.mp3"]
+    console.log(n);
+    playAudio(music[n]);
+    console.log("exited"); 
+}
+function dhh() {
     console.log("entered");
     
     let m = Math.random() * (0 - 4) + 5;
@@ -16,7 +23,30 @@ function bollywood() {
     console.log("exited");
     
 }
-bollywood();
+function rock() {
+    console.log("entered");
+    
+    let m = Math.random() * (0 - 4) + 5;
+    let n = (Math.floor(m))-1;
+    let music = ["sounds/bollywood.mp3","sounds/dhh.mp3","sounds/rock.mp3","sounds/edm.mp3"]
+    console.log(n);
+    playAudio(music[n]);
+    console.log("exited");
+    
+}
+function metal() {
+    console.log("entered");
+    
+    let m = Math.random() * (0 - 4) + 5;
+    let n = (Math.floor(m))-1;
+    let music = ["sounds/bollywood.mp3","sounds/dhh.mp3","sounds/rock.mp3","sounds/edm.mp3"]
+    console.log(n);
+    playAudio(music[n]);
+    console.log("exited");
+    
+}
+
+
 function handleMusicClick() {
     const clickedButton = this.innerHTML;
 
@@ -29,17 +59,16 @@ function handleMusicClick() {
     switch (clickedButton) {
         case "Bollywood":
             console.log("level1");
-            
             bollywood();
             break;
         case "DHH":
-            playAudio("sounds/dhh.mp3");
+            dhh();
             break;
         case "Rock":
-            playAudio("sounds/rock.mp3");
+            rock();
             break;
         case "EDM":
-            playAudio("sounds/edm.mp3");
+            metal();
             break;
         default:
             console.log("Invalid genre");
@@ -83,18 +112,30 @@ document.addEventListener("keydown", (event) => {
 
     switch (event.key) {
         case "z":
-            playAudio("sounds/bollywood.mp3");
+            bollywood();
             break;
         case "x":
-            playAudio("sounds/dhh.mp3");
+            dhh();
             break;
         case "c":
-            playAudio("sounds/rock.mp3");
+            rock();
             break;
         case "v":
-            playAudio("sounds/edm.mp3");
+            metal();
             break;
-        case " ":
+        case "0":
+            gsap.to(".vishnu", {
+                opacity: "100%"
+            });
+            gsap.to(".card", {
+                opacity: "100%"
+            });
+            gsap.to(".judger", {
+                opacity: "100%"
+            });
+            gsap.to(".underline", {
+                opacity: "100%"
+            });
             if (currentAudio && !currentAudio.paused) {
                 currentAudio.pause();
             }
@@ -104,12 +145,13 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
-// This is the crucial change
+
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll(".card").forEach((card) => {
         card.addEventListener("click", handleMusicClick);
     });
 });
+
 
 function yes() {
     console.log("Yes clicked");
