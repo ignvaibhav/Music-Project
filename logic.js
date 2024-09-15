@@ -1,54 +1,95 @@
 let currentAudio = null;
-
+let currentIndex = -1;
 
 //random music logic
 
 function bollywood() {
-    console.log("entered");
-    let m = Math.random() * (0 - 4) + 5;
-    let n = (Math.floor(m))-1;
-    let music = ["sounds/bollywood.mp3","sounds/dhh.mp3","sounds/rock.mp3","sounds/edm.mp3"]
-    console.log(n);
-    playAudio(music[n]);
+    console.log("entered");    
+    
+    // var n = Math.floor(Math.random() * 5);        // more effecient random num gen
+
+    let music = ["sounds/bollywood/bollywood1.mp3","sounds/bollywood/bollywood2.mp3","sounds/bollywood/bollywood3.mp3","sounds/bollywood/bollywood4.mp3","sounds/bollywood/bollywood5.mp3"]
+
+    // console.log(n);
+    console.log(currentIndex);
+
+    playAudio(music[currentIndex]);
     console.log("exited"); 
 }
 function dhh() {
     console.log("entered");
-    
-    let m = Math.random() * (0 - 4) + 5;
-    let n = (Math.floor(m))-1;
-    let music = ["sounds/bollywood.mp3","sounds/dhh.mp3","sounds/rock.mp3","sounds/edm.mp3"]
-    console.log(n);
-    playAudio(music[n]);
+  
+    var n = Math.floor(Math.random() * 6);  
+
+    let music = ["sounds/dhh/dhh1.mp3","sounds/dhh/dhh2.mp3","sounds/dhh/dhh3.mp3","sounds/dhh/dhh4.mp3","sounds/dhh/dhh5.mp3","sounds/dhh/dhh6.mp3"]
+
+    playAudio(music[currentIndex]);
     console.log("exited");
     
 }
 function rock() {
     console.log("entered");
+
+    let music = ["sounds/rock/rock1.mp3","sounds/rock/rock2.mp3","sounds/rock/rock3.mp3","sounds/rock/rock4.mp3","sounds/rock/rock5.mp3"]
     
-    let m = Math.random() * (0 - 4) + 5;
-    let n = (Math.floor(m))-1;
-    let music = ["sounds/bollywood.mp3","sounds/dhh.mp3","sounds/rock.mp3","sounds/edm.mp3"]
-    console.log(n);
-    playAudio(music[n]);
-    console.log("exited");
-    
-}
-function metal() {
-    console.log("entered");
-    
-    let m = Math.random() * (0 - 4) + 5;
-    let n = (Math.floor(m))-1;
-    let music = ["sounds/bollywood.mp3","sounds/dhh.mp3","sounds/rock.mp3","sounds/edm.mp3"]
-    console.log(n);
-    playAudio(music[n]);
+    playAudio(music[currentIndex]);
     console.log("exited");
     
 }
 
+function metal() {
+    console.log("entered");
+
+    let music = ["sounds/metal/metal1.mp3", "sounds/metal/metal2.mp3", "sounds/metal/metal3.mp3", "sounds/metal/metal4.mp3", "sounds/metal/metal5.mp3"]
+
+    playAudio(music[currentIndex]);
+    console.log("exited");
+    
+}
+
+function classical() {
+
+    console.log("entered");
+
+    let music = ["sounds/classical/classical1.mp3","sounds/classical/classical2.mp3","sounds/classical/classical3.mp3","sounds/classical/classical4.mp3","sounds/classical/classical5.mp3"]
+
+    
+    playAudio(music[currentIndex]);
+    console.log("exited");
+    
+}
+
+function edm() {
+    
+    console.log("entered");
+
+    let music = ["sounds/edm/edm1.mp3","sounds/edm/edm2.mp3","sounds/edm/edm3.mp3","sounds/edm/edm4.mp3","sounds/edm/edm5.mp3"]
+  
+   playAudio(music[currentIndex]);
+    console.log("exited");
+    
+}
+
+function punjabi() {
+    
+    console.log("entered");
+
+    let music = ["sounds/punjabi/punjabi1.mp3","sounds/punjabi/punjabi2.mp3","sounds/punjabi/punjabi3.mp3","sounds/punjabi/punjabi4.mp3","sounds/punjabi/punjabi5.mp3"]
+
+
+   playAudio(music[currentIndex]);
+    console.log("exited");
+    
+}
 
 function handleMusicClick() {
     const clickedButton = this.innerHTML;
+
+    currentIndex = currentIndex + 1;
+
+    if (currentIndex === 5) {
+        currentIndex = 0;
+    }
 
     if (currentAudio) {
         currentAudio.pause();
@@ -67,8 +108,17 @@ function handleMusicClick() {
         case "Rock":
             rock();
             break;
-        case "EDM":
+        case "Metal":
             metal();
+            break;
+        case "EDM":
+            edm();
+            break;
+        case "Classical":
+            classical();
+            break;
+        case "Punjabi":
+            punjabi();
             break;
         default:
             console.log("Invalid genre");
@@ -110,6 +160,12 @@ document.addEventListener("keydown", (event) => {
         currentAudio.currentTime = 0;
     }
 
+      currentIndex = currentIndex + 1;
+
+    if (currentIndex === 5) {
+        currentIndex = 0;
+    }
+
     switch (event.key) {
         case "z":
             bollywood();
@@ -122,6 +178,15 @@ document.addEventListener("keydown", (event) => {
             break;
         case "v":
             metal();
+            break;
+        case "b":
+            edm();
+            break;
+        case "n":
+            punjabi();
+            break;
+        case "m":
+            classical();
             break;
         case "0":
             gsap.to(".vishnu", {
