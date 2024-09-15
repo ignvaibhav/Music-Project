@@ -1,7 +1,8 @@
 let currentAudio = null;
 let currentIndex = -1;
 
-//random music logic
+
+/* random❌ sequential✔️ music logic */
 
 function bollywood() {
     console.log("entered");    
@@ -19,10 +20,10 @@ function bollywood() {
 function dhh() {
     console.log("entered");
   
-    var n = Math.floor(Math.random() * 6);  
+    // var n = Math.floor(Math.random() * 6);  
 
-    let music = ["sounds/dhh/dhh1.mp3","sounds/dhh/dhh2.mp3","sounds/dhh/dhh3.mp3","sounds/dhh/dhh4.mp3","sounds/dhh/dhh5.mp3","sounds/dhh/dhh6.mp3"]
-
+    let music = ["sounds/dhh/dhh1.mp3","sounds/dhh/dhh2.mp3","sounds/dhh/dhh3.mp3","sounds/dhh/dhh4.mp3", "sounds/dhh/dhh6.mp3"]
+    
     playAudio(music[currentIndex]);
     console.log("exited");
     
@@ -45,7 +46,7 @@ function metal() {
     playAudio(music[currentIndex]);
     console.log("exited");
     
-}
+} 
 
 function classical() {
 
@@ -82,6 +83,18 @@ function punjabi() {
     
 }
 
+const supBro = (a) => {
+    setTimeout(()=>{
+        gsap.to([".turntable", ".record"], {
+            opacity: 1,
+            background: `url(images/${a}.png)`,
+            duration: 2,
+            delay: 0.3
+          });
+    },2000)
+  }
+  
+
 function handleMusicClick() {
     const clickedButton = this.innerHTML;
 
@@ -99,26 +112,53 @@ function handleMusicClick() {
 
     switch (clickedButton) {
         case "Bollywood":
-            console.log("level1");
-            bollywood();
+            ab();
+            supBro("bollywood");
+            setTimeout(()=>{
+                bollywood();
+            },2000)
             break;
         case "DHH":
-            dhh();
+            ab();
+            supBro("dhh");
+            setTimeout(()=>{
+                dhh();
+            },2000)
             break;
         case "Rock":
-            rock();
+            ab();
+            supBro("rock");
+            setTimeout(()=>{
+                rock();
+            },2000)
             break;
         case "Metal":
-            metal();
+            ab();
+            supBro("metal");
+            setTimeout(()=>{
+                metal();
+            },2000)
             break;
         case "EDM":
-            edm();
+            ab();
+            supBro("edm");
+            setTimeout(()=>{
+                edm();
+            },2000)
             break;
         case "Classical":
-            classical();
+            ab();
+            supBro("classical");
+            setTimeout(()=>{
+                classical();
+            },2000)
             break;
         case "Punjabi":
-            punjabi();
+            ab();
+            supBro("punjabi");
+            setTimeout(()=>{
+                punjabi();
+            },2000)
             break;
         default:
             console.log("Invalid genre");
@@ -168,27 +208,65 @@ document.addEventListener("keydown", (event) => {
 
     switch (event.key) {
         case "z":
-            bollywood();
+            ab();
+            supBro("bollywood");
+            setTimeout(()=>{
+                bollywood();
+            },2000)
             break;
         case "x":
-            dhh();
+            ab();
+            supBro("dhh");
+            setTimeout(()=>{
+                dhh();
+            },2000)
             break;
         case "c":
-            rock();
+            ab();
+            supBro("rock");
+            setTimeout(()=>{
+                rock();
+            },2000)
             break;
         case "v":
-            metal();
+            ab();
+            supBro("metal");
+            setTimeout(()=>{
+                metal();
+            },2000)
             break;
         case "b":
-            edm();
+            ab();
+            supBro("edm");
+            setTimeout(()=>{
+                edm();
+            },2000)
             break;
         case "n":
-            punjabi();
+            ab();
+            supBro("punjabi");
+            setTimeout(()=>{
+                punjabi();
+            },2000)
             break;
         case "m":
-            classical();
+            ab();
+            supBro("classical");
+            setTimeout(()=>{
+                classical();
+            },2000)
             break;
         case "0":
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // This provides a smooth scrolling effect
+              });
+            gsap.to(".page2", {
+                opacity: 0,
+                display: "none",
+                duration: 0.5,
+                delay: 0.2
+            });
             gsap.to(".vishnu", {
                 opacity: "100%"
             });
@@ -205,6 +283,7 @@ document.addEventListener("keydown", (event) => {
                 currentAudio.pause();
             }
             break;
+        
         default:
             console.log("Invalid key");
     }
@@ -217,6 +296,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+/* yet to decide for feedback */
 
 function yes() {
     console.log("Yes clicked");
@@ -230,4 +310,39 @@ function yes() {
         ease: "power2.out",
         display: "inline"
     });
+}
+
+function bc() {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+    });
+}
+
+function ab(){
+    gsap.to(".page2", {
+        opacity: 1,
+        display: "flex",
+        duration: 2,
+        delay: 0.5
+    });
+
+    setTimeout(()=>{
+        bc();
+    },1000)
+
+    setTimeout(()=>{
+        playBtn.textContent = '⏸';
+        arm.style.transform = 'rotate(0deg)';
+        record.style.animationPlayState = 'running';
+    }, 2000)
+}
+
+function playButton() {
+    if (currentAudio && !currentAudio.paused) {
+        currentAudio.pause();
+    }
+    else{
+        currentAudio.play();
+    }
 }

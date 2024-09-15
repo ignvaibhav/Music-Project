@@ -13,7 +13,7 @@
         <h1 class="vishnu">Vaibhav GPT</h1>
         <h2 class="judger">Your music companion</h2>
         <div id="cards">
-            <button class="card" onclick="ab()">Bollywood</button>
+            <button class="card">Bollywood</button>
             <button class="card">DHH</button>
             <button class="card">Rock</button>
             <button class="card">Metal</button>
@@ -45,6 +45,9 @@
     <!---------- Page 2 ------------>
 
     <div class="page2">
+
+    <!---------- Vinyl Player ------------>
+
         <div class="player">
             <div class="turntable">
                 <div class="record"></div>
@@ -54,7 +57,7 @@
                 <div class="song-info">Queen / Hammer to Fall</div>
                 <div class="buttons">
                     <button id="prevBtn">⏮</button>
-                    <button id="playBtn">▶</button>
+                    <button id="playBtn" onclick="playButton()">▶</button>
                     <button id="nextBtn">⏭</button>
                     <button id="menuBtn">☰</button>
                 </div>
@@ -94,21 +97,6 @@
             }
         });
 
-    </script>
-
-    <script>
-        function ab() {
-            window.scrollTo({
-                top: document.body.scrollHeight,
-                behavior: 'smooth'
-            });
-            gsap.to(".page2", {
-                display: "block",
-                opacity: 1,
-                duration: 0.5,
-                delay: 0.5 // Delay to start after scrolling
-            });
-        }
     </script>
 </body>
 </html>

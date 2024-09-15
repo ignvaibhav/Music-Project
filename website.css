@@ -23,7 +23,7 @@ body {
     }
 
 .page1 {
-    background: url("8bit.gif") no-repeat center center / cover;
+    background: url("download.jpeg") no-repeat center center / cover;
     /* background-color: black; */
     height: 100vh;
     width: 100%;
@@ -204,8 +204,12 @@ iframe {
 
 .page2{
     background: #007bff;
+    opacity: 0;
     height: 100vh;
     width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
 }
 
 /*------------- vinyl css -------------*/
@@ -213,7 +217,6 @@ iframe {
 .player {
     background-color: #D2B48C;
     margin-left: 1300px;
-    top: 30%;
     border-radius: 20px;
     padding: 20px;
     display: flex;
@@ -224,18 +227,20 @@ iframe {
     border: 5px solid #8B4513;
 }
 .turntable {
+    opacity: 0;
     width: 200px;
     height: 200px;
-    background: url(images/pop.png);
+    /* background: url(images/pop.png); */
     border-radius: 50%;
     position: relative;
     margin-bottom: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 .record {
+    opacity: 0;
     width: 180px;
     height: 180px;
-    background: url(images/pop.png);
+    /* background: url(images/pop.png); */
     border-radius: 50%;
     position: absolute;
     top: 10px;
