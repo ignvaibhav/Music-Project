@@ -317,6 +317,7 @@ function bc() {
         top: document.body.scrollHeight,
         behavior: 'smooth'
     });
+
 }
 
 function ab(){
@@ -327,9 +328,20 @@ function ab(){
         delay: 0.5
     });
 
+
     setTimeout(()=>{
         bc();
     },1000)
+
+    setTimeout(()=>{
+        gsap.to(".page1",{
+            opacity:0,
+            display:none,
+            duration: 2,
+            delay: 0.5
+            
+        })
+    },1000) 
 
     setTimeout(()=>{
         playBtn.textContent = '⏸';

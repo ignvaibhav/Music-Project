@@ -87,11 +87,11 @@
         playBtn.addEventListener('click', () => {
             isPlaying = !isPlaying;
             if (isPlaying) {
-                playBtn.textContent = '▶';
+                playBtn.textContent = '⏸';
                 arm.style.transform = 'rotate(0deg)';
                 record.style.animationPlayState = 'running';
             } else {
-                playBtn.textContent = '⏸';
+                playBtn.textContent = '▶';
                 arm.style.transform = 'rotate(-20deg)';
                 record.style.animationPlayState = 'paused';
             }
