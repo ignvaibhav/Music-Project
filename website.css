@@ -18,7 +18,7 @@ body {
 .page1 {
     /* background: url(SL_123119_26540_02.jpg) no-repeat center center / cover fixed; */
     /* background: linear-gradient(135deg, #1b1464, #2b32b2, #0f77f0); */
-    background-color: black;
+    background-color: #000;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -42,10 +42,10 @@ body {
 }
 
 .logo {
-    margin-top: 31px;
-    margin-left: 70px;
-    width: 150px;
-    height: 150px;
+    margin-top: 30px;
+    margin-left: 0px;
+    width: 100px;
+    height: 100px;
 }
 
 .logo img {
@@ -56,33 +56,57 @@ body {
 }
 
 .badges {
+    border-radius: 30px;
     position: absolute;
     top: 60px;
     right: 140px;
     display: flex;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    animation: none; /* No animation by default */
 }
 
 .badges img {
-    width: 180px;  /* Adjust this value to match the reference image */
-    height: 180px; /* Adjust this value to match the reference image */
+    width: 100px;  /* Adjust this value to match the reference image */
+    height: 100px; /* Adjust this value to match the reference image */
+    transform: scale(1.1); /* Increase size */
+}
+
+.b1:hover{
+    animation: shake 0.5s ease-in-out infinite;
 }
 
 /* If needed to offset the second badge slightly */
-.badges .b2 {
-    margin-top: 70px;
+.b2:hover {
+    /* margin-top: 70px; */
+    /* transform: rotate(-5deg); Slight rotation */
+    animation: shake 0.5s ease-in-out infinite;
 }
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+/* @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+} */
 
 .vishnu {
     font-size: 68px;
     color: #8e7ed0;
     margin-top: 88px;
-    margin-right: 700px;
+    margin-right:60%;
 }
 
 .judger {
     font-size: 26px;
     color: #6C8091;
-    margin-right: 727px;
+    margin-right: 60%;
     margin-top: -5px;
     bottom: 50px;
 }
@@ -109,6 +133,7 @@ body {
 }
 
 .swiper-slide-active img {
+    -webkit-box-reflect:unset;
     box-shadow: 0 0 9px 6px rgba(255, 255, 255, 0.8);
 }
 
@@ -126,15 +151,18 @@ body {
 
 .icons {
     position: absolute;
-    bottom: 18%;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 
 .icon {
+    border: #fff solid;
+    border-radius: 20px;
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -142,12 +170,13 @@ body {
     height: 100%;
     opacity: 0;
     transition: opacity 0.3s ease;
+    box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.8);
 }
 
 .icon img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .icon.active {
