@@ -10,13 +10,6 @@ gsap.to("h2",{
     y:-30,
     opacity:"100%"
 })
-gsap.to(".card",{
-    delay:0.4,
-    duration:1,
-    stagger:0.2,
-    y:-30,
-    opacity:"100%"
-})
 
 gsap.to(".underline",{
     delay:0.3,

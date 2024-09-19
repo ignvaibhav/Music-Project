@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web Code</title>
+    <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- link file css -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        
+        html,  body {
+            overflow-x: hidden;
+            /* Hides horizontal scrollbar */
+            overflow-y: hidden;
+            /* Hides vertical scrollbar */
+            margin: 0;
+            /* Ensures no default margin */
+            padding: 0;
+            width: 100%;
+            height: 100%;
+          }
+        
+        
+        }
+        body{
+            height: 100vh;
+            background-color: #01000c;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            color: #fff;
+            font-size: 55px;
+            margin: 80px 0;
+        }
+        .swiper {
+            width: 80%;
+            height: 90%;
+            overflow: visible
+          }
+        .swiper-slide-active img {
+          /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); */
+          position: relative;
+          box-shadow: 0px 0px 9px 6px rgba(255, 255, 255, 0.8);
+        }
+          .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 250px;
+          }
+        
+          .swiper-slide img {
+            display: block;
+            width: 100%;
+           
+            -webkit-box-reflect: below 1px linear-gradient(transparent, transparent , #0002 , #0004);
+          }
+    </style>
+</head>
+<body>
+    <h1>Vaibhav GPT</h1>
+
+    <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide Bollywood">
+        <img src="/images/pop.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/pop.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/pop.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/pop.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/pop.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/pop.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/pop.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/pop.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/pop.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/pop.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/pop.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/pop.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/pop.png" alt="">
+      </div>
+
+      <!-- 15 div -->
+    
+    </div>
+  </div>
+
+
+    
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="logic.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      keyboard: {
+        enabled: true,
+      },
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 10,
+        stretch: -120,
+        depth: 300,
+        modifier: 1,
+        slideShadows: true,
+      },
+      loop: true,
+    });
+  </script>
+</body>
+</html>
