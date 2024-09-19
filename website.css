@@ -184,8 +184,8 @@ body {
 }
 
 .glass{
-    height: 90vh;
-    width: 90vw;
+    height: 85vh;
+    width: 85vw;
     background: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
     border-radius: 15px;
     backdrop-filter: blur(10px); /* Background blur effect */
@@ -194,6 +194,38 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
     padding: 20px;
     color: rgb(0, 0, 255);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    /* Adjust size for the heading */
+    font-weight: bold;
+    line-height: 1.2;
+    /* Space between lines for readability */
+    margin-bottom: 20px;
+    /* Space between the heading and the text */
+    color: #ffffff;
+    /* Text color */
+}
+.info {
+        font-size: 1.4rem;
+        /* Smaller text size for the paragraph */
+        line-height: 1.5;
+        /* Space between lines for readability */
+        color: #cccccc;
+        /* Text color */
+        max-width: 100%;
+        /* Adjust the width so the text doesn't stretch too much */
+        
+}
+
+.text {
+    color: white;
+    width: 100%;
+    max-height: 100%;
 }
 
 .page2 {
@@ -208,6 +240,8 @@ body {
 
 .player {
     background-color: #D2B48C;
+    margin-left: 30%;
+    margin-top: 5%;
     border-radius: 20px;
     padding: 20px;
     display: flex;
@@ -301,7 +335,7 @@ iframe {
 }
 
 .feedback {
-    
+    display: none;
     animation: float 4s ease-in-out forwards;
     background-color: #ffffff;
     border-radius: 10px;
