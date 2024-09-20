@@ -18,7 +18,8 @@ body {
 .page1 {
     /* background: url(SL_123119_26540_02.jpg) no-repeat center center / cover fixed; */
     /* background: linear-gradient(135deg, #1b1464, #2b32b2, #0f77f0); */
-    background-color: #000;
+    /* background: linear-gradient(135deg, #1b1464, #2b32b2, #0f77f0); */
+    background:#000;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -46,13 +47,23 @@ body {
     margin-left: 0px;
     width: 100px;
     height: 100px;
+    animation: pulse 3s ease-in-out infinite;
 }
+
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+
+
 
 .logo img {
     border-radius: 50%;
     width: 100%;
     height: 100%;
-    object-fit: contain;
 }
 
 .badges {
@@ -64,6 +75,7 @@ body {
     transition: transform 0.3s ease;
     cursor: pointer;
     animation: none; /* No animation by default */
+    gap: 39px; /* Add space between the icons */
 }
 
 .badges img {
@@ -99,7 +111,7 @@ body {
 .vishnu {
     font-size: 68px;
     color: #8e7ed0;
-    margin-top: 88px;
+    margin-top: 82px;
     margin-right:60%;
 }
 
@@ -133,11 +145,17 @@ body {
 }
 
 .swiper-slide-active img {
+    border: #fff solid;
     -webkit-box-reflect:unset;
-    box-shadow: 0 0 9px 6px rgba(255, 255, 255, 0.8);
+    animation: glow 2s linear infinite; 
+}
+@keyframes glow {
+    0% { box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 10px #fff; }
+    100% { box-shadow: 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff; }
 }
 
-.underline {
+
+/* .underline {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -147,7 +165,9 @@ body {
         0 0 10px rgba(0, 0, 255, 0.7),
         0 0 20px rgba(0, 0, 255, 0.5),
         0 0 30px rgba(0, 0, 255, 0.3);
-}
+} */
+
+
 
 .icons {
     position: absolute;
@@ -158,6 +178,7 @@ body {
     width: 40px;
     height: 40px;
 }
+
 
 .icon {
     border: #fff solid;
@@ -171,6 +192,7 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease;
     box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.8);
+    /* animation: glow 1s linear infinite; Animation for rotation */
 }
 
 .icon img {
@@ -260,7 +282,7 @@ body {
 .turntable {
     width: 200px;
     height: 200px;
-    background: #8B4513;
+    background: #fff;
     border-radius: 50%;
     position: relative;
     margin-bottom: 20px;
@@ -268,6 +290,7 @@ body {
 }
 
 .record {
+    overflow: hidden;
     width: 180px;
     height: 180px;
     background: #8B4513;
@@ -275,6 +298,12 @@ body {
     position: absolute;
     top: 10px;
     left: 10px;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.record img{
+    width: 180px;
+    height: 180px;
 }
 
 @keyframes spin {
@@ -284,7 +313,7 @@ body {
 .arm {
     width: 100px;
     height: 3px;
-    background-color: #000000;
+    background-color: #fff;
     position: absolute;
     top: 100px;
     right: -20px;
@@ -385,4 +414,56 @@ button.no {
 
 button:hover {
     opacity: 0.8;
+}
+
+
+
+       /* Equalizer */
+
+
+/* Container for the equalizer */
+.equalizer {
+    margin-left: 46%;
+    margin-top: 90%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 200px; /* Adjust the width */
+    height: 100px; /* Adjust the height */
+    background-color: #111;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Individual bars of the equalizer */
+.bar {
+    width: 10px; /* Width of the bars */
+    height: 20px; /* Initial height of the bars */
+    background-color: #fff ; /* Bar color */
+    animation: bounce 1s infinite ease-in-out;
+}
+
+/* Different animation delays for each bar to make them bounce at different times */
+.bar:nth-child(1) {
+    animation-delay: 0s;
+}
+.bar:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.bar:nth-child(3) {
+    animation-delay: 0.2s;
+}
+.bar:nth-child(4) {
+    animation-delay: 0.3s;
+}
+.bar:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+/* Animation for the bouncing effect of the equalizer bars */
+@keyframes bounce {
+    0% { height: 20px; }
+    50% { height: 100px; } /* Maximum height when bouncing */
+    100% { height: 20px; }
 }

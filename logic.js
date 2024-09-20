@@ -111,7 +111,7 @@ function nextsong(currentIndex) {
 
 const playlists = {
     bollywood: ["sounds/bollywood/Senorita.mp3","sounds/bollywood/Badtameez Dil.mp3","sounds/bollywood/Mitwa.mp3","sounds/bollywood/Tera Hone Laga Hoon.mp3","sounds/bollywood/Chaleya.mp3"],
-    dhh: ["sounds/dhh/dhh1.mp3","sounds/dhh/dhh2.mp3","sounds/dhh/dhh3.mp3","sounds/dhh/dhh4.mp3", "sounds/dhh/dhh6.mp3"],
+    dhh: ["sounds/dhh/Joota Japani (by KRSNA and Mukesh).mp3","sounds/dhh/Choot Vol. 1 (by Honey and Badshah).mp3","sounds/dhh/Desi Kalakaar ( by Yo Yo Honey Singh).mp3","sounds/dhh/Namastute (by Seedhe Maut).mp3", "sounds/dhh/Baazigar (by Armani White and Divine).mp3"],
     rock: ["sounds/rock/rock1.mp3","sounds/rock/rock2.mp3","sounds/rock/rock3.mp3","sounds/rock/rock4.mp3","sounds/rock/rock5.mp3"],
     metal: ["sounds/metal/metal1.mp3", "sounds/metal/metal2.mp3", "sounds/metal/metal3.mp3", "sounds/metal/metal4.mp3", "sounds/metal/metal5.mp3"],
     classical: ["sounds/classical/classical1.mp3","sounds/classical/classical2.mp3","sounds/classical/classical3.mp3","sounds/classical/classical4.mp3","sounds/classical/classical5.mp3"],
