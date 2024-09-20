@@ -339,11 +339,11 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute; /* Allows it to be positioned relative to the entire page */
-    top: 60%; /* Moves it to the middle of the page vertically */
-    left: 50%; /* Moves it to the middle of the page horizontally */
+    top: 72%; /* Moves it to the middle of the page vertically */
+    left: 41%; /* Moves it to the middle of the page horizontally */
     transform: translate(-50%, -50%); /* Centers the element perfectly */
     z-index: 999; /* Highest z-index so it appears on top of all elements */
-    width: 70vw; /* 70% of the viewport width */
+    width: 85vw; /* 70% of the viewport width */
     height: auto; /* Adjust height automatically */
     
 }
@@ -376,6 +376,7 @@ iframe {
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+    opacity: 0;
     max-width: 400px;
 }
 
@@ -445,6 +446,7 @@ button:hover {
 }
 
 /* Different animation delays for each bar to make them bounce at different times */
+
 .bar:nth-child(1) {
     animation-delay: 0s;
 }
@@ -459,11 +461,4 @@ button:hover {
 }
 .bar:nth-child(5) {
     animation-delay: 0.4s;
-}
-
-/* Animation for the bouncing effect of the equalizer bars */
-@keyframes bounce {
-    0% { height: 20px; }
-    50% { height: 100px; } /* Maximum height when bouncing */
-    100% { height: 20px; }
 }

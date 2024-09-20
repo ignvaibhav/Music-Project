@@ -150,7 +150,9 @@ function updateSongInfo() {
 //genres functions
 
 function bollywood() {
-    console.log("entered bollywood");    
+    console.log("entered bollywood");   
+    
+    
     
     currentGenre = 'bollywood';
     currentIndex = 0;
@@ -290,6 +292,23 @@ function punjabi() {
 
 // Play Button Function *have to fix*
 
+function feedbackAppear() {
+    gsap.to('.feedback',{
+        display : "block",
+        y: -30,
+        duration: 0.8,
+        opacity: 1
+    })
+}
+
+function feedbackPlaylist(heading, inf, feedback, playlist){
+    document.querySelector('.heading').innerHTML = heading;
+    document.querySelector('.info').innerHTML = inf;
+    document.querySelector('.feedbacktext').innerHTML = feedback;
+    let p = document.querySelector('.playlist_spotify')
+    p.setAttribute = ("src", playlist);
+}
+
 function playButton() {
     const arm = document.querySelector('.arm')
     const playBtn = document.querySelector("#playBtn");
@@ -338,6 +357,7 @@ function updatePlayButtonState() {
 
 
 /*--------------------- Handle Mouse Click ---------------------*/
+
 function handleMusicClick(event) {
     const clickedGenre = event.currentTarget.getAttribute('data-genre');
     console.log(clickedGenre);
@@ -354,10 +374,18 @@ function handleMusicClick(event) {
     setTimeout(() => {
         switch (clickedGenre) {
             case "bollywood":
+                feedbackPlaylist("Bollywood", "Bollywood music is a genre that blends traditional Indian music with contemporary pop and electronic sounds. It features upbeat rhythms, catchy melodies, and emotionally charged lyrics that often explore themes of love, heartbreak, and self-discovery. This genre is characterized by the use of electronic instruments, such as synthesizers and drum machines, and is often accompanied by colorful music videos that showcase elaborate dance routines. The singers who dominate this genre have powerful, emotive voices that can convey a wide range of emotions, from joy and passion to sadness and longing.", "wanna listen more", "https://open.spotify.com/embed/playlist/2HibxdzVLGDPR5GIrm4cza?utm_source=generator&theme=0")
                 bollywood();
+                setTimeout(()=>{
+                    feedbackAppear();
+                },6000);
                 break;
             case "DHH":
+                feedbackPlaylist("Desi Hip Hop", "Desi hip hop is a genre of music that blends traditional Indian music with modern hip hop beats and lyrics. It often includes elements of Punjabi music and language, and is known for its energetic and upbeat sound. The genre has gained popularity in recent years, with many artists incorporating their own unique styles and cultural influences into their music.", "wanna listen more", "https://open.spotify.com/embed/playlist/7hCUgCmtC02mQe4lUg5ZSs?utm_source=generator&theme=0")
                 dhh();
+                setTimeout(()=>{
+                    feedbackAppear();
+                },6000);
                 break;
             case "Rock":
                 rock();
@@ -507,6 +535,7 @@ document.addEventListener("keydown", (event) => {
                 top: 0,
                 behavior: 'smooth'
             });
+            
             gsap.to(".page2", {
                 opacity: 0,
                 display: "none",
@@ -528,6 +557,7 @@ document.addEventListener("keydown", (event) => {
             if (currentAudio && !currentAudio.paused) {
                 currentAudio.pause();
             }
+
             break;
         default:
             console.log("Invalid key");
