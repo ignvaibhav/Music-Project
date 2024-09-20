@@ -1,4 +1,6 @@
 // Initialize Swiper.js
+let vaibhav = "bollywood"
+
 document.addEventListener("DOMContentLoaded", function() {
     var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
@@ -26,6 +28,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 var activeSlide = this.slides[this.activeIndex];
                 var genre = activeSlide.getAttribute('data-genre');
                 console.log(genre);
+                vaibhav = genre;
+                console.log("vaibhav",vaibhav);
+                try {
+                    genre_name(vaibhav);
+                } catch (error) {
+                    console.error("Error in genre_name function:", error);
+                }
+
+                background_changer(vaibhav);
+                
                 switchActiveIcon(genre);
             }
         }
@@ -49,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function switchActiveIcon(genre) {
         console.log('Switching to genre:', genre);
-    
+        
         // Remove active class from all icons with animation
         const allIcons = document.querySelectorAll('.icon');
         console.log('Found', allIcons.length, 'icons');
@@ -63,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             });
         });
-    
+        
         // Add active class to the matching icon with animation
         const iconClass = genre.toLowerCase() + '_icon';
         const activeIcon = document.querySelector('.' + iconClass);
@@ -151,8 +163,6 @@ function updateSongInfo() {
 
 function bollywood() {
     console.log("entered bollywood");   
-    
-    
     
     currentGenre = 'bollywood';
     currentIndex = 0;
@@ -306,7 +316,7 @@ function feedbackPlaylist(heading, inf, feedback, playlist){
     document.querySelector('.info').innerHTML = inf;
     document.querySelector('.feedbacktext').innerHTML = feedback;
     let p = document.querySelector('.playlist_spotify')
-    p.setAttribute = ("src", playlist);
+    p.setAttribute("src", playlist);
 }
 
 function playButton() {
@@ -355,6 +365,80 @@ function updatePlayButtonState() {
 }
 
 
+function genre_name(vaibhav) {
+    console.log(vaibhav);
+    console.log("njenk");
+    let f = vaibhav.toLowerCase();
+
+    document.querySelector('.genre_name').innerHTML = f;
+}
+
+function background_changer(genre) {
+    switch (genre) {
+        case "bollywood":
+            gsap.to(('.page1'),{
+                background: 'linear-gradient(to bottom, rgba(54,58,172,1) 0%, rgba(53,187,189,1) 35%, rgba(112,221,139,1) 76%, rgba(168,204,177,1) 100%)'
+            })
+            gsap.to(('.page2'),{
+                background: 'linear-gradient(to top, rgba(54,58,172,1) 0%, rgba(53,187,189,1) 35%, rgba(112,221,139,1) 76%, rgba(168,204,177,1) 100%)'
+            })
+            break;            
+        case "DHH":
+            gsap.to(('.page1'),{
+                background: 'linear-gradient(to bottom, rgba(49,46,22,1) 0%, rgba(54,64,33,1) 0%, rgba(167,143,69,1) 60%, rgba(201,185,134,1) 100%)'
+            })
+            gsap.to(('.page2'),{
+                background: 'linear-gradient(to top, rgba(49,46,22,1) 0%, rgba(54,64,33,1) 0%, rgba(167,143,69,1) 60%, rgba(201,185,134,1) 100%)'
+            })
+            break;
+        case "Rock":
+            gsap.to(('.page1'),{
+                // background: 'url(rock.png) no-repeat center center / cover'
+                background: 'linear-gradient(to bottom, rgba(57,4,6,1) 0%, rgba(237,27,36,1) 69%, rgba(213,113,117,1) 100%)'
+            })
+            gsap.to(('.page2'),{
+                // background: 'url(rock.png) no-repeat center center / cover'
+                background: 'linear-gradient(to top, rgba(57,4,6,1) 0%, rgba(237,27,36,1) 69%, rgba(213,113,117,1) 100%)'
+            })
+            break;
+        case "Metal":
+            gsap.to(('.page1'),{
+                background: 'linear-gradient(to bottom, rgba(0,10,46,1) 37%, rgba(215,193,155,1) 73%, rgba(205,194,175,1) 100%)'
+            })
+            gsap.to(('.page2'),{
+                background: 'linear-gradient(to top, rgba(0,10,46,1) 37%, rgba(215,193,155,1) 73%, rgba(205,194,175,1) 100%)'
+            })
+            break;
+        case "EDM":
+            gsap.to(('.page1'),{
+                background: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(89,45,136,1) 27%, rgba(161,98,180,1) 52%, rgba(202,128,175,1) 100%)'
+            })
+            gsap.to(('.page2'),{
+                background: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(89,45,136,1) 27%, rgba(161,98,180,1) 52%, rgba(202,128,175,1) 100%)'
+            })
+            break;
+        case "Classical":
+            gsap.to('.page1', {
+                background: 'linear-gradient(to bottom, rgba(99,41,4,1) 0%, rgba(204,144,93,1) 63%, rgba(255,213,173,1) 100%)'
+            });
+            gsap.to('.page2', {
+                background: 'linear-gradient(to top, rgba(99,41,4,1) 0%, rgba(204,144,93,1) 63%, rgba(255,213,173,1) 100%)'
+            });
+            
+            break;
+        case "Punjabi":
+            gsap.to(('.page1'),{
+                background: 'linear-gradient(to bottom, rgba(246,75,128,1) 0%, rgba(255,207,32,1) 53%, rgba(238,224,172,1) 100%)'
+            })
+            gsap.to(('.page2'),{
+                background: 'linear-gradient(to top, rgba(246,75,128,1) 0%, rgba(255,207,32,1) 53%, rgba(238,224,172,1) 100%)'
+            })
+            break;
+        default:
+            console.log("Invalid genre");
+    }
+
+}
 
 /*--------------------- Handle Mouse Click ---------------------*/
 
@@ -372,42 +456,82 @@ function handleMusicClick(event) {
 
     ab();
     setTimeout(() => {
-        switch (clickedGenre) {
-            case "bollywood":
-                feedbackPlaylist("Bollywood", "Bollywood music is a genre that blends traditional Indian music with contemporary pop and electronic sounds. It features upbeat rhythms, catchy melodies, and emotionally charged lyrics that often explore themes of love, heartbreak, and self-discovery. This genre is characterized by the use of electronic instruments, such as synthesizers and drum machines, and is often accompanied by colorful music videos that showcase elaborate dance routines. The singers who dominate this genre have powerful, emotive voices that can convey a wide range of emotions, from joy and passion to sadness and longing.", "wanna listen more", "https://open.spotify.com/embed/playlist/2HibxdzVLGDPR5GIrm4cza?utm_source=generator&theme=0")
-                bollywood();
-                
-                setTimeout(()=>{
-                    feedbackAppear();
-                },6000);
-                break;
-            case "DHH":
-                feedbackPlaylist("Desi Hip Hop", "Desi hip hop is a genre of music that blends traditional Indian music with modern hip hop beats and lyrics. It often includes elements of Punjabi music and language, and is known for its energetic and upbeat sound. The genre has gained popularity in recent years, with many artists incorporating their own unique styles and cultural influences into their music.", "wanna listen more", "https://open.spotify.com/embed/playlist/7hCUgCmtC02mQe4lUg5ZSs?utm_source=generator&theme=0")
-                dhh();
-                setTimeout(()=>{
-                    feedbackAppear();
-                },6000);
-                break;
-            case "Rock":
-                rock();
-                break;
-            case "Metal":
-                metal();
-                break;
-            case "EDM":
-                edm();
-                break;
-            case "Classical":
-                classical();
-                break;
-            case "Punjabi":
-                punjabi();
-                break;
-            default:
-                console.log("Invalid genre");
+        gsap.to((".spotify-player-container"),{
+            duration: 0.5,
+            opacity: 0,
+            y: -500,
+            ease: "power2.out",
+            display: "none"
+        })
+        gsap.to((".feedback"),{
+            display: "none",
+            duration: 0.7
+        })
+        if (currentAudio && !currentAudio.paused) {
+            currentAudio.pause();
         }
-        // Update play button state after new audio is loaded
-        updatePlayButtonState();
+            switch (clickedGenre) {
+                case "bollywood":
+                    feedbackPlaylist("Bollywood", "Bollywood music is a genre that blends traditional Indian music with contemporary pop and electronic sounds. It features upbeat rhythms, catchy melodies, and emotionally charged lyrics that often explore themes of love, heartbreak, and self-discovery. This genre is characterized by the use of electronic instruments, such as synthesizers and drum machines, and is often accompanied by colorful music videos that showcase elaborate dance routines. The singers who dominate this genre have powerful, emotive voices that can convey a wide range of emotions, from joy and passion to sadness and longing.", "wanna listen more", "https://open.spotify.com/embed/playlist/2HibxdzVLGDPR5GIrm4cza?utm_source=generator&theme=0")
+                    bollywood();
+                    
+                    setTimeout(()=>{
+                        feedbackAppear();
+                    },6000);
+                    break;
+                case "DHH":
+                    feedbackPlaylist("Desi Hip Hop", "Desi hip hop is a genre of music that blends traditional Indian music with modern hip hop beats and lyrics. It often includes elements of Punjabi music and language, and is known for its energetic and upbeat sound. The genre has gained popularity in recent years, with many artists incorporating their own unique styles and cultural influences into their music.", "wanna listen more", "https://open.spotify.com/embed/playlist/7hCUgCmtC02mQe4lUg5ZSs?utm_source=generator&theme=0")
+                    dhh();
+                    
+                    setTimeout(()=>{
+                        feedbackAppear();
+                    },6000);
+                    break;
+                case "Rock":
+                    feedbackPlaylist("Rock", "Rock music is a genre characterized by its heavy use of electric guitars, drums, and bass. It often features powerful vocals and lyrics that touch on themes of rebellion, love, and angst; songs in this genre vary from being relaxed and laid back to more aggressive types. This genre has evolved over time, with sub-genres such as alternative rock, indie rock, and classic rock. Some of the defining characteristics of rock music include its high energy, catchy melodies, and memorable hooks. It has been a popular genre for decades, with bands like Imagine Dragons, Arctic Monkeys, and Queen being some of the most well-known and influential in the industry.", "wanna listen more", "https://open.spotify.com/embed/playlist/7dowgSWOmvdpwNkGFMUs6e?utm_source=generator&theme=0")
+                    rock();
+                    
+                    setTimeout(()=>{
+                        feedbackAppear();
+                    },6000);
+                    break;
+                case "Metal":
+                    feedbackPlaylist("Metal", "Metal music is a genre that is characterized by its heavy and aggressive sound, often featuring distorted guitars, fast-paced drumming, and powerful vocals. It has roots in rock and roll, but has evolved over the years to include a wide range of sub-genres, including thrash, heavy, and power metal. Metal music often deals with themes of rebellion, anger, and darkness, and is known for its intense live performances.", "wanna listen more", "https://open.spotify.com/embed/playlist/3pBfUFu8MkyiCYyZe849Ks?utm_source=generator&theme=0")
+                    metal();
+                    
+                    setTimeout(()=>{
+                        feedbackAppear();
+                    },6000);
+                    break;
+                case "EDM":
+                    feedbackPlaylist("EDM", "EDM is a genre of electronic dance music that is characterized by its upbeat tempo, heavy basslines, prominent use of synthesizers and catchy melodies. It incorporates elements of various sub-genres such as house, techno, and trance. The music is often played at festivals and clubs, and is known for its high-energy and crowd-pleasing nature. It has gained mainstream popularity in recent years, with many artists achieving commercial success.", "wanna listen more", "https://open.spotify.com/embed/playlist/3pDxuMpz94eDs7WFqudTbZ?utm_source=generator&theme=0")
+                    edm();
+                    
+                    setTimeout(()=>{
+                        feedbackAppear();
+                    },6000);
+                    break;
+                case "Classical":
+                    feedbackPlaylist("Classical", "Classical music is a genre that emerged in the 18th century and is characterized by its formal structure, use of orchestral instruments, and emphasis on melody and harmony. It is often associated with the works of composers such as Bach, Mozart, and Chopin, who are known for their intricate compositions, technical skill, and emotional depth. Classical music has endured through the centuries and continues to be celebrated for its beauty and complexity.", "wanna listen more", "https://open.spotify.com/embed/playlist/3HYK6ri0GkvRcM6GkKh0hJ?utm_source=generator&theme=0")
+                    classical();
+                    
+                    setTimeout(()=>{
+                        feedbackAppear();
+                    },6000);
+                    break;
+                case "Punjabi":
+                    feedbackPlaylist("Punjabi", "Punjabi music is a genre that blends traditional Punjabi folk music with contemporary pop and hip-hop elements. It is characterized by upbeat rhythms, catchy melodies, and lyrics that often touch on themes of love, partying, gang activities and the like. The genre has gained popularity in recent years, particularly among youth from all over India, also being incorporated into Bollywood movies, and has produced several successful artists who have achieved mainstream success both in India and abroad.", "wanna listen more?", "https://open.spotify.com/embed/playlist/0a8gfAB5pIeR5x2ln5ARq0?utm_source=generator&theme=0")
+                    punjabi();
+                    
+                    setTimeout(()=>{
+                        feedbackAppear();
+                    },6000);
+                    break;
+                default:
+                    console.log("Invalid genre");
+            }
+            // Update play button state after new audio is loaded
+            updatePlayButtonState();
     }, 1400);
 }
 
@@ -478,6 +602,7 @@ function no() {
     });
     gsap.to(".feedback", {
         opacity: 0,
+        duration: 1,
         display: none,
         y: 500
     });
@@ -570,7 +695,6 @@ document.addEventListener("keydown", (event) => {
                 top: 0,
                 behavior: 'smooth'
             });
-            
             gsap.to(".page2", {
                 opacity: 0,
                 display: "none",
@@ -594,9 +718,7 @@ document.addEventListener("keydown", (event) => {
                 display: none,
                 y: 500
             });
-            if (currentAudio && !currentAudio.paused) {
-                currentAudio.pause();
-            }
+
 
             break;
         default:
