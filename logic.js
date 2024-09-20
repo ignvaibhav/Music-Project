@@ -110,13 +110,13 @@ function nextsong(currentIndex) {
 }
 
 const playlists = {
-    bollywood: ["sounds/bollywood/Senorita.mp3","sounds/bollywood/Badtameez Dil.mp3","sounds/bollywood/Mitwa.mp3","sounds/bollywood/Tera Hone Laga Hoon.mp3","sounds/bollywood/Chaleya.mp3"],
-    dhh: ["sounds/dhh/Joota Japani (by KRSNA and Mukesh).mp3","sounds/dhh/Choot Vol. 1 (by Honey and Badshah).mp3","sounds/dhh/Desi Kalakaar ( by Yo Yo Honey Singh).mp3","sounds/dhh/Namastute (by Seedhe Maut).mp3", "sounds/dhh/Baazigar (by Armani White and Divine).mp3"],
-    rock: ["sounds/rock/rock1.mp3","sounds/rock/rock2.mp3","sounds/rock/rock3.mp3","sounds/rock/rock4.mp3","sounds/rock/rock5.mp3"],
-    metal: ["sounds/metal/metal1.mp3", "sounds/metal/metal2.mp3", "sounds/metal/metal3.mp3", "sounds/metal/metal4.mp3", "sounds/metal/metal5.mp3"],
-    classical: ["sounds/classical/classical1.mp3","sounds/classical/classical2.mp3","sounds/classical/classical3.mp3","sounds/classical/classical4.mp3","sounds/classical/classical5.mp3"],
-    edm: ["sounds/edm/edm1.mp3","sounds/edm/edm2.mp3","sounds/edm/edm3.mp3","sounds/edm/edm4.mp3","sounds/edm/edm5.mp3"],
-    punjabi: ["sounds/punjabi/punjabi1.mp3","sounds/punjabi/punjabi2.mp3","sounds/punjabi/punjabi3.mp3","sounds/punjabi/punjabi4.mp3","sounds/punjabi/punjabi5.mp3"]
+    bollywood: ["sounds/bollywood/Badtameez Dil - Pritam, Benny Dayal.mp3","sounds/bollywood/Chaleya - Arijit Singh.mp3","sounds/bollywood/Mitwa - Shankar-Ehsaan-Loy.mp3","sounds/bollywood/Senorita - Farhan, Hrithik, Abhay.mp3","sounds/bollywood/Tera Hone Laga Hoon - Atif Aslam.mp3"],
+    dhh: ["sounds/dhh/Baazigar - Divine.mp3","sounds/dhh/Cute Vol.1 - Raftaar.mp3","sounds/dhh/Joota Japani - KRSNA.mp3","sounds/dhh/Namastute - Seedhe Maut.mp3", "sounds/dhh/Trap Praa - Raaftaar, Prabh.mp3"],
+    rock: ["sounds/rock/Enter Sandman - Metallica.mp3","sounds/rock/Sadda Haq - Mohit Chauhan.mp3","sounds/rock/Stairway to Heaven - Led Zeppelin.mp3","sounds/rock/Sweet Child o mine - Guns n Roses.mp3","sounds/rock/What I've Done - Linkin Park.mp3"],
+    metal: ["sounds/metal/Bleed - Meshuggah.mp3", "sounds/metal/Gaddar - Bloodywood.mp3", "sounds/metal/Psychosocial - Slipknot.mp3", "sounds/metal/Silvera - Gojira.mp3", "sounds/metal/Walk with me in hell - Lamb Of God.mp3"],
+    classical: ["sounds/classical/Moonlight Sonata Third movt. - Beethoven.mp3","sounds/classical/Nocturne Op. 9 No. 2 - Chopin.mp3","sounds/classical/Summer - Vivaldi.mp3","sounds/classical/Symphony No. 5 in C minor - Beethoven.mp3","sounds/classical/Violin Concerto in E major - Bach.mp3"],
+    edm: ["sounds/edm/Alone - Marshmello.mp3","sounds/edm/Animals - Martin Garrix.mp3","sounds/edm/Levels - Avicii.mp3","sounds/edm/The Nights - Avicii.mp3","sounds/edm/The Spectre - Alan Walker.mp3"],
+    punjabi: ["sounds/punjabi/Desi Kalakaar - Honey Singh.mp3","sounds/punjabi/Lahore - Guru Randhawa.mp3","sounds/punjabi/Naah - Harrdy Sandhu.mp3","sounds/punjabi/Naina - Diljit Dosanjh, Badshah.mp3","sounds/punjabi/No love - Shubh.mp3"]
 };
 
 function nextSong() {
