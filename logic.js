@@ -376,6 +376,7 @@ function handleMusicClick(event) {
             case "bollywood":
                 feedbackPlaylist("Bollywood", "Bollywood music is a genre that blends traditional Indian music with contemporary pop and electronic sounds. It features upbeat rhythms, catchy melodies, and emotionally charged lyrics that often explore themes of love, heartbreak, and self-discovery. This genre is characterized by the use of electronic instruments, such as synthesizers and drum machines, and is often accompanied by colorful music videos that showcase elaborate dance routines. The singers who dominate this genre have powerful, emotive voices that can convey a wide range of emotions, from joy and passion to sadness and longing.", "wanna listen more", "https://open.spotify.com/embed/playlist/2HibxdzVLGDPR5GIrm4cza?utm_source=generator&theme=0")
                 bollywood();
+                
                 setTimeout(()=>{
                     feedbackAppear();
                 },6000);
@@ -445,6 +446,40 @@ function yes() {
         y: -500,
         ease: "power2.out",
         display: "inline"
+    });
+}
+
+function no() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+    if (currentAudio && !currentAudio.paused) {
+        currentAudio.pause();
+    }
+    
+    gsap.to(".page2", {
+        opacity: 0,
+        display: "none",
+        duration: 0.5,
+        delay: 0.2
+    });
+    gsap.to(".vishnu", {
+        opacity: "100%"
+    });
+    gsap.to(".card", {
+        opacity: "100%"
+    });
+    gsap.to(".judger", {
+        opacity: "100%"
+    });
+    gsap.to(".underline", {
+        opacity: "100%"
+    });
+    gsap.to(".feedback", {
+        opacity: 0,
+        display: none,
+        y: 500
     });
 }
 
@@ -553,6 +588,11 @@ document.addEventListener("keydown", (event) => {
             });
             gsap.to(".underline", {
                 opacity: "100%"
+            });
+            gsap.to(".feedback", {
+                opacity: 0,
+                display: none,
+                y: 500
             });
             if (currentAudio && !currentAudio.paused) {
                 currentAudio.pause();

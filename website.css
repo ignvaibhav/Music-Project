@@ -19,7 +19,7 @@ body {
     /* background: url(SL_123119_26540_02.jpg) no-repeat center center / cover fixed; */
     /* background: linear-gradient(135deg, #1b1464, #2b32b2, #0f77f0); */
     /* background: linear-gradient(135deg, #1b1464, #2b32b2, #0f77f0); */
-    background:#000;
+    background :#000;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -145,6 +145,7 @@ body {
 }
 
 .swiper-slide-active img {
+
     border: #fff solid;
     -webkit-box-reflect:unset;
     animation: glow 2s linear infinite; 
