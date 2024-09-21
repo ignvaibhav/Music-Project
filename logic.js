@@ -472,7 +472,7 @@ function handleMusicClick(event) {
         }
             switch (clickedGenre) {
                 case "bollywood":
-                    feedbackPlaylist("Bollywood", "Bollywood music is a genre that blends traditional Indian music with contemporary pop and electronic sounds. It features upbeat rhythms, catchy melodies, and emotionally charged lyrics that often explore themes of love, heartbreak, and self-discovery. This genre is characterized by the use of electronic instruments, such as synthesizers and drum machines, and is often accompanied by colorful music videos that showcase elaborate dance routines. The singers who dominate this genre have powerful, emotive voices.", "wanna listen more", "https://open.spotify.com/embed/playlist/2HibxdzVLGDPR5GIrm4cza?utm_source=generator&theme=0")
+                    feedbackPlaylist("Bollywood", "Bollywood music is a genre that blends traditional Indian music with contemporary pop and electronic sounds. It features upbeat rhythms, catchy melodies, and emotionally charged lyrics that often explore themes of love, heartbreak, and self-discovery. This genre is characterized by the use of electronic instruments, such as synthesizers and drum machines, and is often accompanied by colorful music videos that showcase elaborate dance routines. The singers who dominate this genre have powerful, emotive voices.", "Did you like this genre?", "https://open.spotify.com/embed/playlist/2HibxdzVLGDPR5GIrm4cza?utm_source=generator&theme=0")
                     bollywood();
                     
                     setTimeout(()=>{
@@ -480,7 +480,7 @@ function handleMusicClick(event) {
                     },6000);
                     break;
                 case "DHH":
-                    feedbackPlaylist("Desi Hip Hop", "Desi hip hop is a genre of music that blends traditional Indian music with modern hip hop beats and lyrics. It often includes elements of Punjabi music and language, and is known for its energetic and upbeat sound. The genre has gained popularity in recent years, with many artists incorporating their own unique styles and cultural influences into their music.", "wanna listen more", "https://open.spotify.com/embed/playlist/7hCUgCmtC02mQe4lUg5ZSs?utm_source=generator&theme=0")
+                    feedbackPlaylist("Desi Hip Hop", "Desi hip hop is a genre of music that blends traditional Indian music with modern hip hop beats and lyrics. It often includes elements of Punjabi music and language, and is known for its energetic and upbeat sound. The genre has gained popularity in recent years, with many artists incorporating their own unique styles and cultural influences into their music.", "Did you like this genre?", "https://open.spotify.com/embed/playlist/7hCUgCmtC02mQe4lUg5ZSs?utm_source=generator&theme=0")
                     dhh();
                     
                     setTimeout(()=>{
@@ -488,7 +488,7 @@ function handleMusicClick(event) {
                     },6000);
                     break;
                 case "Rock":
-                    feedbackPlaylist("Rock", "Rock music is a genre characterized by its heavy use of electric guitars, drums, and bass. It often features powerful vocals and lyrics that touch on themes of rebellion, love, and angst; songs in this genre vary from being relaxed and laid back to more aggressive types. This genre has evolved over time, with sub-genres such as alternative rock, indie rock, and classic rock. Some of the defining characteristics of rock music include its high energy, catchy melodies, and memorable hooks. It has been a popular genre for decades.", "wanna listen more", "https://open.spotify.com/embed/playlist/7dowgSWOmvdpwNkGFMUs6e?utm_source=generator&theme=0")
+                    feedbackPlaylist("Rock", "Rock music is a genre characterized by its heavy use of electric guitars, drums, and bass. It often features powerful vocals and lyrics that touch on themes of rebellion, love, and angst; songs in this genre vary from being relaxed and laid back to more aggressive types. This genre has evolved over time, with sub-genres such as alternative rock, indie rock, and classic rock. Some of the defining characteristics of rock music include its high energy, catchy melodies, and memorable hooks. It has been a popular genre for decades.", "Did you like this genre?", "https://open.spotify.com/embed/playlist/7dowgSWOmvdpwNkGFMUs6e?utm_source=generator&theme=0")
                     rock();
                     
                     setTimeout(()=>{
@@ -496,7 +496,7 @@ function handleMusicClick(event) {
                     },6000);
                     break;
                 case "Metal":
-                    feedbackPlaylist("Metal", "Metal music is a genre that is characterized by its heavy and aggressive sound, often featuring distorted guitars, fast-paced drumming, and powerful vocals. It has roots in rock and roll, but has evolved over the years to include a wide range of sub-genres, including thrash, heavy, and power metal. Metal music often deals with themes of rebellion, anger, and darkness, and is known for its intense live performances.", "wanna listen more", "https://open.spotify.com/embed/playlist/3pBfUFu8MkyiCYyZe849Ks?utm_source=generator&theme=0")
+                    feedbackPlaylist("Metal", "Metal music is a genre that is characterized by its heavy and aggressive sound, often featuring distorted guitars, fast-paced drumming, and powerful vocals. It has roots in rock and roll, but has evolved over the years to include a wide range of sub-genres, including thrash, heavy, and power metal. Metal music often deals with themes of rebellion, anger, and darkness, and is known for its intense live performances.", "Did you like this genre?", "https://open.spotify.com/embed/playlist/3pBfUFu8MkyiCYyZe849Ks?utm_source=generator&theme=0")
                     metal();
                     
                     setTimeout(()=>{
@@ -504,7 +504,7 @@ function handleMusicClick(event) {
                     },6000);
                     break;
                 case "EDM":
-                    feedbackPlaylist("EDM", "EDM is a genre of electronic dance music that is characterized by its upbeat tempo, heavy basslines, prominent use of synthesizers and catchy melodies. It incorporates elements of various sub-genres such as house, techno, and trance. The music is often played at festivals and clubs, and is known for its high-energy and crowd-pleasing nature. It has gained mainstream popularity in recent years, with many artists achieving commercial success.", "wanna listen more", "https://open.spotify.com/embed/playlist/3pDxuMpz94eDs7WFqudTbZ?utm_source=generator&theme=0")
+                    feedbackPlaylist("EDM", "EDM is a genre of electronic dance music that is characterized by its upbeat tempo, heavy basslines, prominent use of synthesizers and catchy melodies. It incorporates elements of various sub-genres such as house, techno, and trance. The music is often played at festivals and clubs, and is known for its high-energy and crowd-pleasing nature. It has gained mainstream popularity in recent years, with many artists achieving commercial success.", "Did you like this genre?", "https://open.spotify.com/embed/playlist/3pDxuMpz94eDs7WFqudTbZ?utm_source=generator&theme=0")
                     edm();
                     
                     setTimeout(()=>{
@@ -512,7 +512,7 @@ function handleMusicClick(event) {
                     },6000);
                     break;
                 case "Classical":
-                    feedbackPlaylist("Classical", "Classical music is a genre that emerged in the 18th century and is characterized by its formal structure, use of orchestral instruments, and emphasis on melody and harmony. It is often associated with the works of composers such as Bach, Mozart, and Chopin, who are known for their intricate compositions, technical skill, and emotional depth. Classical music has endured through the centuries and continues to be celebrated for its beauty and complexity.", "wanna listen more", "https://open.spotify.com/embed/playlist/3HYK6ri0GkvRcM6GkKh0hJ?utm_source=generator&theme=0")
+                    feedbackPlaylist("Classical", "Classical music is a genre that emerged in the 18th century and is characterized by its formal structure, use of orchestral instruments, and emphasis on melody and harmony. It is often associated with the works of composers such as Bach, Mozart, and Chopin, who are known for their intricate compositions, technical skill, and emotional depth. Classical music has endured through the centuries and continues to be celebrated for its beauty and complexity.", "Did you like this genre?", "https://open.spotify.com/embed/playlist/3HYK6ri0GkvRcM6GkKh0hJ?utm_source=generator&theme=0")
                     classical();
                     
                     setTimeout(()=>{
@@ -520,7 +520,7 @@ function handleMusicClick(event) {
                     },6000);
                     break;
                 case "Punjabi":
-                    feedbackPlaylist("Punjabi", "Punjabi music is a genre that blends traditional Punjabi folk music with contemporary pop and hip-hop elements. It is characterized by upbeat rhythms, catchy melodies, and lyrics that often touch on themes of love, partying, gang activities and the like. The genre has gained popularity in recent years, particularly among youth from all over India, also being incorporated into Bollywood movies, and has produced several successful artists who have achieved mainstream success both in India and abroad.", "wanna listen more?", "https://open.spotify.com/embed/playlist/0a8gfAB5pIeR5x2ln5ARq0?utm_source=generator&theme=0")
+                    feedbackPlaylist("Punjabi", "Punjabi music is a genre that blends traditional Punjabi folk music with contemporary pop and hip-hop elements. It is characterized by upbeat rhythms, catchy melodies, and lyrics that often touch on themes of love, partying, gang activities and the like. The genre has gained popularity in recent years, particularly among youth from all over India, also being incorporated into Bollywood movies, and has produced several successful artists who have achieved mainstream success both in India and abroad.", "Did you like this genre??", "https://open.spotify.com/embed/playlist/0a8gfAB5pIeR5x2ln5ARq0?utm_source=generator&theme=0")
                     punjabi();
                     
                     setTimeout(()=>{
