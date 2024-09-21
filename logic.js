@@ -472,7 +472,7 @@ function handleMusicClick(event) {
         }
             switch (clickedGenre) {
                 case "bollywood":
-                    feedbackPlaylist("Bollywood", "Bollywood music is a genre that blends traditional Indian music with contemporary pop and electronic sounds. It features upbeat rhythms, catchy melodies, and emotionally charged lyrics that often explore themes of love, heartbreak, and self-discovery. This genre is characterized by the use of electronic instruments, such as synthesizers and drum machines, and is often accompanied by colorful music videos that showcase elaborate dance routines. The singers who dominate this genre have powerful, emotive voices that can convey a wide range of emotions, from joy and passion to sadness and longing.", "wanna listen more", "https://open.spotify.com/embed/playlist/2HibxdzVLGDPR5GIrm4cza?utm_source=generator&theme=0")
+                    feedbackPlaylist("Bollywood", "Bollywood music is a genre that blends traditional Indian music with contemporary pop and electronic sounds. It features upbeat rhythms, catchy melodies, and emotionally charged lyrics that often explore themes of love, heartbreak, and self-discovery. This genre is characterized by the use of electronic instruments, such as synthesizers and drum machines, and is often accompanied by colorful music videos that showcase elaborate dance routines. The singers who dominate this genre have powerful, emotive voices.", "wanna listen more", "https://open.spotify.com/embed/playlist/2HibxdzVLGDPR5GIrm4cza?utm_source=generator&theme=0")
                     bollywood();
                     
                     setTimeout(()=>{
@@ -488,7 +488,7 @@ function handleMusicClick(event) {
                     },6000);
                     break;
                 case "Rock":
-                    feedbackPlaylist("Rock", "Rock music is a genre characterized by its heavy use of electric guitars, drums, and bass. It often features powerful vocals and lyrics that touch on themes of rebellion, love, and angst; songs in this genre vary from being relaxed and laid back to more aggressive types. This genre has evolved over time, with sub-genres such as alternative rock, indie rock, and classic rock. Some of the defining characteristics of rock music include its high energy, catchy melodies, and memorable hooks. It has been a popular genre for decades, with bands like Imagine Dragons, Arctic Monkeys, and Queen being some of the most well-known and influential in the industry.", "wanna listen more", "https://open.spotify.com/embed/playlist/7dowgSWOmvdpwNkGFMUs6e?utm_source=generator&theme=0")
+                    feedbackPlaylist("Rock", "Rock music is a genre characterized by its heavy use of electric guitars, drums, and bass. It often features powerful vocals and lyrics that touch on themes of rebellion, love, and angst; songs in this genre vary from being relaxed and laid back to more aggressive types. This genre has evolved over time, with sub-genres such as alternative rock, indie rock, and classic rock. Some of the defining characteristics of rock music include its high energy, catchy melodies, and memorable hooks. It has been a popular genre for decades.", "wanna listen more", "https://open.spotify.com/embed/playlist/7dowgSWOmvdpwNkGFMUs6e?utm_source=generator&theme=0")
                     rock();
                     
                     setTimeout(()=>{

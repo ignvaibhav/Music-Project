@@ -43,7 +43,7 @@ body {
 
 .logo {
     margin-top: 49px;
-    margin-left: 32px;
+    /* margin-left: 1px; */
     width: 150px;
     height: 150px;
     animation: pulse 3s ease-in-out infinite;
@@ -405,8 +405,8 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute; /* Allows it to be positioned relative to the entire page */
-    top: 68.5%; /* Moves it to the middle of the page vertically */
-    left: 51.2%; /* Moves it to the middle of the page horizontally */
+    top: 78%; /* Moves it to the middle of the page vertically */
+    left: 50%; /* Moves it to the middle of the page horizontally */
     transform: translate(-50%, -50%); /* Centers the element perfectly */
     z-index: 999; /* Highest z-index so it appears on top of all elements */
     width: 83vw; /* 70% of the viewport width */
