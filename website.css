@@ -42,10 +42,10 @@ body {
 }
 
 .logo {
-    margin-top: 49px;
-    /* margin-left: 1px; */
-    width: 150px;
-    height: 150px;
+    margin-top: 58px;
+    margin-left: 38px;
+    width: 130px;
+    height: 130px;
     animation: pulse 3s ease-in-out infinite;
 }
 
@@ -119,15 +119,15 @@ body {
 .vishnu {
     font-family: 'Disco 2000', sans-serif;
     text-transform: lowercase;
-    font-size: 120px;
+    font-size: 90px;
     color: #ffffff;
     margin-top: 82px;
     margin-right:55%;
 }
 
 .judger {
-    font-family: 'Disco 2000', sans-serif;
-    font-size: 38px;
+    font-family: 'Recoleta', sans-serif;
+    font-size: 23px;
 
     margin-right: 55%;
     margin-top: -10px;
@@ -136,7 +136,7 @@ body {
 }
 
 .genre_name {
-    font-family: 'Disco 2000', sans-serif;
+    font-family: 'Recoleta', sans-serif;
     position: absolute;
     top: 32%; /* Adjust this value as needed */
     left: 50%;
@@ -151,7 +151,7 @@ body {
 }
 
 .swiper {
-    top: 80px;
+    top: 111px;
     width: 80%;
     height: 45vh;
     overflow: visible;
